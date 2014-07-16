@@ -16,7 +16,7 @@ Posts.deny({
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user(),
-      postWithSameLink = Posts.findOne({url:postAttributes.url});
+      postWithSameLink = Posts.findOne({url: postAttributes.url});
 
       // ensure the user is logged in
       if (!user)
@@ -34,7 +34,7 @@ Meteor.methods({
       }
 
       // pick out the whitelisted keys
-      var post = _.extent(_.pick(postAttributes, 'url', 'title', 'message'), {
+      var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
         userID: user._id,
         author: user.username,
         submitted: new Date().getTime()
