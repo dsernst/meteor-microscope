@@ -14,6 +14,6 @@ Template.commentSubmit.events({
       } else {
         $body.val('');
       }
-    }};
+    });
   }
-}};
+});
