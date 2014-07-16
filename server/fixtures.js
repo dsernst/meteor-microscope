@@ -21,7 +21,7 @@ if (Posts.find().count() === 0) {
   });
 
   Comments.insert({
-    postId: telescopeId,
+    postId: letsFixId,
     userId: gary._id,
     author: gary.profile.name,
     submitted: now - 5 * 3600 * 1000,
@@ -29,7 +29,7 @@ if (Posts.find().count() === 0) {
   });
 
   Comments.insert({
-    postId: telescopeId,
+    postId: letsFixId,
     userId: sacha._id,
     author: sacha.profile.name,
     submitted: now - 3 * 3600 * 1000,
