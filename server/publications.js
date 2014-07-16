@@ -1,5 +1,5 @@
 Meteor.publish('posts', function() {
-  return Posts.find();
+  return Posts.find({}, options);
 });
 
 Meteor.publish('comments', function(postId) {
