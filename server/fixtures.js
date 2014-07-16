@@ -17,7 +17,8 @@ if (Posts.find().count() === 0) {
     userId: sacha._id,
     author: sacha.profile.name,
     url: 'http://letsfix.net',
-    submitted: now - 7 * 3600 * 1000
+    submitted: now - 7 * 3600 * 1000,
+    commentsCount: 2
   });
 
   Comments.insert({
@@ -41,7 +42,8 @@ if (Posts.find().count() === 0) {
     userId: gary._id,
     author: gary.profile.name,
     url: 'http://meteor.com',
-    submitted: now - 10 * 3600 * 1000
+    submitted: now - 10 * 3600 * 1000,
+    commentsCount: 0
   });
 
   Posts.insert({
@@ -49,6 +51,7 @@ if (Posts.find().count() === 0) {
     userId: gary._id,
     author: gary.profile.name,
     url: 'http://www.toomanybunnies.com/about-us.html',
-    submitted: now - 12 * 3600 * 1000
+    submitted: now - 12 * 3600 * 1000,
+    commentsCount: 0
   });
 }
