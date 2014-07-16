@@ -26,7 +26,7 @@ Meteor.methods({
       if (!postAttributes.title)
         throw new Meteor.Error(422, 'Please fill in a headline');
 
-      // check that there are no previous psots with the same link
+      // check that there are no previous posts with the same link
       if (postAttributes.url && postWithSameLink) {
         throw new Meteor.Error(302,
           'This link has already been posted',
