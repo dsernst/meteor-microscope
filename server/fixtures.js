@@ -64,5 +64,5 @@ if (Posts.find().count() === 0) {
       submitted: now - i * 3600 * 1000 + 1,
       commentsCount: 0
     });
-  };
+  }
 }
